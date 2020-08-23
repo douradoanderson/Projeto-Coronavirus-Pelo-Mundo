@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Coronavírus</title>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="sortcut icon" href="assets/SRC/bacterias.png" type="image/x-icon" />
+</head>
+
+<body>
+    <input type="checkbox" id="bt_menu" />
+    <label for="bt_menu">&#9776;</label>
+    <nav class="menu">
+        <a href="#home">Menu</a>
+        <a href="#top">Prevenção</a>
+        <a href="#hist">Histórico</a>
+        <a href="#footer">Sobre nós</a>
+    </nav>
+
+    <section id="home">
+        <h1>Coronavírus pelo mundo</h1>
+        <h2>Veja os dados de Coronavírus de todo um continente!</h2>
+        <h2>Basta selecionar abaixo:</h2>
+        <p>Mas não se apresse, um país por vez, tá bom? Para uma pesquisa mais específica.</p>
+
+        <div >
+            <li type="1">Os dados serão carregado de acordo com o campo escolhido.</li>
+            <li type="1">Para trocar de continente use o botão limpar os países e escolha de novo o continente.</li>
+            <select id="language" onchange="verDados()">
+                <option value="disabled selected">Escolha algum continente...</option>
+                <option>Asia</option>
+                <option>North-America</option>
+                <option>South-America</option>
+                <option>Africa</option>
+                <option>Europe</option>
+                <option>Oceania</option>
+            </select>
+            <select id="paises" onchange="verResultado()">
+                <option value="disabled selected">As opções serão carregas aqui, CLICA E VEJA ABAIXO</option>
+            </select>
+            <button id="limpar" value="click">Limpar</button>
+            <!--<button onclick="verResultado()">Ver mais</button>-->
+            
+
+        </div>
+
+        <h2>Casos:</h2>
+
+        <h3>ATIVOS:</h3>
+        <p id="resultCA">Aguardando resultado...</p>
+        <h3>RECUPERADOS:</h3>
+        <p id="resultCR">Aguardando resultado...</p>
+        <h3>ESTADO CRÍTICO:</h3>
+        <p id="resultCC">Aguardando resultado...</p>
+        <h3>TOTAL:</h3>
+        <p id="resultTC">Aguardando resultado...</p>
+
+        <h2>Mortes:</h2>
+
+        <h3>TOTAL:</h3>
+        <p id="resultTM">Aguardando resultado...</p>
+
+        <h2>POPULAÇÃO ATUAL:</h2>
+        <p id="resultP">Aguardando resultado...</p>
+    </section>
+
+    <section id="top">
+
+        <h1>Sobre a doença:</h1>
+
+        <h2>Sintomas da doença:</h2>
+
+        <p>Os sintomas mais comuns do vírus COVID-19, são febre, tosse seca e cansaço. Muitos parecidos com o vírus da
+            gripe, por isso devemos ter atenção.</p>
+        <p>Há vários sintomas desse novo vírus, os sintomas menos comuns são:</p>
+
+        <ul>
+            <li>Dores e desconfortos musculares</li>
+            <li>Dor de garganta</li>
+            <li>Diarreia</li>
+            <li>Conjuntivite</li>
+            <li> Dor de cabeça</li>
+            <li>Perda de paladar ou olfato</li>
+        </ul>
+
+        <p>Existem sintomas piores, se a pessoa estiver com esses sintomas, são do grupo de risco, e devem procurar
+            meios
+            de atendimento médico rapidamente, casos como esses podem levar a pessoa a óbito.</p>
+        <p>Os sintomas são:</p>
+
+        <ul><li>Conjuntivite</li>
+            <li> Dor de cabeça</li>
+            <li>Perda de paladar ou olfato</li>
+            <li>Falta de ar ou dificuldade para respirar</li>
+            <li>Dor ou pressão no peito</li>
+            <li>Perda de fala ou movimentação</li>
+        </ul>
+
+
+        <p>Pessoas com doenças como diabete, asma, ou outras doenças relacionadas, devem se resguardar ao máximo, são as
+            pessoas do grupo de risco que devem tomar mais cuidados e meios de prevenção. Pois o efeito do vírus podem
+            causar muitos danos, levando a pessoa a óbito.</p>
+
+        <h2>Prevenção:</h2>
+        <p>Sabemos que combater o vírus COVID-19, não é fácil, por isso que os meios de prevenção indicados para evitar a
+            propagação do vírus são:</p>
+        <li>Lave as mão com bastante frequência, passe álcool em gel nas mãos, principalmente se precisar sair de casa.</li>
+        <li>O uso de máscaras muito importante.</li>
+        <li>Fique em uma distância segura das pessoas</li>
+        <li>Não toque no nariz, na boca ou nos olhos</li>
+        <li>Cubra seu nariz ou boca com o braço dobrado ou um lenço quando for espirrar ou tossir</li>
+        <li>Fique em casa, saia de casa só para necessidades especiais</li>
+        <li>Procure atendimento médico se tiver tosse, febre ou dificuldade para respirar.</li>
+
+
+
+    </section>
+
+    <section id="hist">
+        <h1>Histórico de pesquisa</h1>
+        <p>Aqui você encontra o primeiro resultado entre suas buscas recentes.</p>
+        <div id="busca-recente">
+            <h2 id="ultima-busca"></h2>
+            <button onclick="mostrarAmzLocal()">Ver buscas</button>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <h1>Instituição:</h1>
+        <p><img src="assets/SRC/01-logoif.png" alt="IFTO" width="150px" height="200px" /></p>
+        <h2>3ª Série - INFORMÁTICA</h2>
+        <h1>Equipe:</h1>
+        <p><img src="assets/SRC/and.jpeg" alt="Anderson" width="250px" height="250px" /> </p>
+        <h2>Anderson Dourado</h2>
+        <p><img src="assets/SRC/jp.jpeg" alt="João Pedro" width="250px" height="250px" /> </p>
+        <h2>João P. França</h2>
+    </footer>
+
+    <script src="assets/JS/script.js"></script>
+</body>
+
+</html>

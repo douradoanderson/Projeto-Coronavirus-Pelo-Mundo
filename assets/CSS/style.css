@@ -1,0 +1,246 @@
+/* __________________________básico_________________________________*/
+
+    * {
+        box-sizing: border-box;
+    }
+
+    :root {
+        --nav-width: 15vw;
+    }
+
+    @font-face {
+    font-family: 'Josefin Slab';
+    src: url("https://fonts.gstatic.com/s/josefinslab/v10/lW-5wjwOK3Ps5GSJlNNkMalnqg6v.woff2");
+    }
+
+    html{
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Josefin Slab';
+        padding-left: var(--nav-width);
+        margin: 0;
+    }
+
+/* __________________________________________________________________*/
+
+
+
+/* ____________________________ menu________________________________*/
+
+    
+    nav{
+        position: fixed;
+        font-size: 20px;
+        left: 0;
+        width: 20%;
+        height: 100%;
+        padding: 2em;
+        background: #333;
+        color: #fff;
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+        margin: 2em 0; 
+        font-size: 100%;
+    }
+
+    #bt_menu {
+        display: none;
+    }
+
+    label[for='bt_menu'] {
+        margin-left: 0px;
+        margin-top: 0px;
+        padding: 5px;
+        font-size: 30px;
+        cursor: pointer;
+        display: none;
+        width: 100%;
+        height: 50px;
+    }
+
+    label[for='bt_menu']:hover {
+        background-color: #fff;
+        color: #333;
+    }
+
+/* __________________________________________________________________*/
+
+
+
+/* __________________________lis__________________________________*/
+
+    li{
+        font-size: 25px;
+    }
+
+/* _______________________________________________________________*/
+
+
+
+/* ___________________select option e button______________________*/
+
+    select{
+        width: 60%;
+        height: 40px;
+        border-radius: 10px;
+        background-color: #cfc1c1;
+        border: 0;
+        margin-left: 10%;
+        margin-top: 4em;
+    }
+
+    option{
+        color: black;
+        background-color: #cfc1c1;
+    }
+
+    button{
+        height: 40px;
+        background-color: black;
+        color: #fff;
+        border-radius: 10px;
+        border: 0;
+    }
+/* __________________________________________________________________*/
+
+
+
+/* ___________________________p h1 h2 h3 _____________________________*/
+
+    p{
+        font-size: 22px;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 45px;
+    }
+    h2{
+        color: #fff;
+        font-size: 25px;
+    }
+    h3{
+        font-size: 15px;
+    }
+
+/* __________________________________________________________________*/
+
+
+
+/* _____________________________section______________________________*/
+
+    section{
+        margin-left: 5%;
+        padding-bottom: 5em;
+        padding-left: 5%;
+        padding-top: 1em;
+        color: #fff;
+    }
+
+/* __________________________________________________________________*/
+
+
+
+/* ______________________________ids_________________________________*/
+
+
+/* ______________________________home________________________________*/
+
+#home{
+    background-color: crimson;
+}
+#home p{
+    font-size: 15px;
+    margin-left: 0;
+}
+
+/* __________________________________________________________________*/
+
+/* ___________________________top____________________________________*/
+
+#top{
+    background-color: cornflowerblue;
+}
+
+#top{
+    display: flex;
+    flex-direction: column;
+}
+
+/* __________________________________________________________________*/
+
+/* ___________________________hist___________________________________*/
+
+#hist{
+    background-color: gold;
+}
+
+/* __________________________________________________________________*/
+
+/* __________________________footer_________________________________*/
+
+#footer{
+    margin-left: 5%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#footer h2{
+    color: green;
+}
+#footer h1{
+    color: darkred;
+}
+
+/* __________________________________________________________________*/
+
+
+/* __________________________________________________________________*/
+
+
+
+
+/* _________________RESPONSIVIDADE DO MENU E DO SITE_________________*/
+
+@media (max-width: 800px) {
+
+    :root {
+        --nav-width: 0;
+    }
+    nav{
+        position:absolute;
+        top: 49px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background: #555;
+        color: #fff;
+    }
+    .menu {
+        margin-left: -100%;
+        transition: all .6s;
+    }
+    label[for='bt_menu'] {
+        display: block;
+    }
+
+    #bt_menu:checked~.menu {
+        margin-left: 0;
+    }
+    section{
+        margin-left: 0px;
+    }
+    #footer{
+        margin-left: 0px;
+    }
+}
+
+/* __________________________________________________________________*/
+
